@@ -3,8 +3,8 @@
 This project demonstrates the capabilities of a turnkey managed K8s solution called - VMware PKS.
 The integrations are : 
 
-a. Harbor
-b. vRLI
-c. Wavefront
-d. NSX-T
-d. vSAN 
+a. Harbor <br>
+b. vRLI <br>
+c. Wavefront <br>
+d. NSX-T <br>
+d. vSAN  <br>
