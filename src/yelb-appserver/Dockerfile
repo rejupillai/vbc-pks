@@ -6,9 +6,7 @@ MAINTAINER massimo@it20.info
 # Set the working directory to /app
 WORKDIR /app
 
-COPY yelb-appserver.rb yelb-appserver.rb 
-COPY Gemfile Gemfile
-COPY modules modules
+COPY yelb-appserver.rb yelb-appserver.rb
 
 ENV LANG=en_us.UTF-8
 ENV LC_ALL=C.UTF-8
@@ -21,8 +19,7 @@ RUN apt-get update
 RUN apt-get install libpq-dev -y
 ### end of hack (this would require additional research and optimization)
 RUN gem install pg --no-ri --no-rdoc
-### this installs the AWS SDK for DynamoDB (so that appserver can talk to DDB Vs the default Postgres/Redis)
-RUN gem install aws-sdk-dynamodb pg --no-ri --no-rdoc
+
 # Set the working directory to /
 WORKDIR /
 ADD startup.sh startup.sh

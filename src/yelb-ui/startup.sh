@@ -6,7 +6,7 @@ cd clarity-seed
 # this is needed for the ECS service discovery (a search domain can't be added with awsvpc mode) 
 if [ $SEARCH_DOMAIN ]; then echo "search ${SEARCH_DOMAIN}" >> /etc/resolv.conf; fi 
 
-sed -i -- 's#/usr/share/nginx/html#/clarity-seed/'$UI_ENV'/dist#g' $NGINX_CONF
+sed -i -- 's#/usr/shae/nginx/html#/clarity-seed/'$UI_ENV'/dist#g' $NGINX_CONF
 
 # this adds the reverse proxy configuration to nginx 
 # everything that hits /api is proxied to the app server     
